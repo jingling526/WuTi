@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TestView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3W5-a1-FhE">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="j20-Rb-ITi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcB-Z5-fYS">
+                    <rect key="frame" x="93" y="50" width="110" height="30"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="Zhu-GQ-AqE"/>
+                        <constraint firstAttribute="height" constant="30" id="zKC-1P-7IR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="开始测试"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="想知道什么样的画最符合你的气质吗？快来测试一下吧！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km4-Kb-KRQ" customClass="TopLeftLabel">
+                    <rect key="frame" x="93" y="0.0" width="207" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="OFI-Pt-yEv"/>
+                        <constraint firstAttribute="width" constant="207" id="Thv-bt-Yot"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xcB-Z5-fYS" firstAttribute="leading" secondItem="3W5-a1-FhE" secondAttribute="trailing" constant="13" id="4ZQ-3X-8cj"/>
+                <constraint firstItem="3W5-a1-FhE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8tM-95-3GE"/>
+                <constraint firstAttribute="bottom" secondItem="3W5-a1-FhE" secondAttribute="bottom" id="GYG-1u-FmO"/>
+                <constraint firstItem="km4-Kb-KRQ" firstAttribute="leading" secondItem="3W5-a1-FhE" secondAttribute="trailing" constant="13" id="TwF-ia-2c6"/>
+                <constraint firstItem="3W5-a1-FhE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UFf-2M-nOK"/>
+                <constraint firstItem="km4-Kb-KRQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ci4-a2-e3a"/>
+                <constraint firstAttribute="bottom" secondItem="xcB-Z5-fYS" secondAttribute="bottom" id="tyz-E6-94t"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="content" destination="km4-Kb-KRQ" id="T62-Gz-xb8"/>
+                <outlet property="image" destination="3W5-a1-FhE" id="3gq-PJ-JpU"/>
+            </connections>
+            <point key="canvasLocation" x="88" y="176"/>
+        </view>
+    </objects>
+</document>

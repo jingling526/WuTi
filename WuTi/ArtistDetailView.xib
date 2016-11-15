@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ArtistDetailView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像" translatesAutoresizingMaskIntoConstraints="NO" id="c8Y-VC-VKm">
+                    <rect key="frame" x="15" y="18" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="8lg-Qg-gIt"/>
+                        <constraint firstAttribute="height" constant="35" id="nuB-B8-OD1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="17.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吴冠中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBV-UE-cV3">
+                    <rect key="frame" x="64" y="27" width="209" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="更多" translatesAutoresizingMaskIntoConstraints="NO" id="PR6-9q-k4H">
+                    <rect key="frame" x="349" y="31" width="11" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="YfE-5R-tdp"/>
+                        <constraint firstAttribute="width" constant="11" id="a8D-l2-cbj"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5q-7I-BZC">
+                    <rect key="frame" x="10" y="65" width="355" height="295"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <string key="text">吴冠中在50～70年代，致力于风景油画创作，并进行油画民族化的探
+吴冠中作品
+吴冠中作品
+索。他力图把欧洲油画描绘自然的直观生动性、油画色彩的丰富细腻性与中国传统艺术精神、审美理想融合到一起。
+从70年代起，吴冠中渐渐兼事中国画创作。他力图运用中国传统材料工具表现现代精神，并探求中国画的革新。
+1919年8月29日（阴历闰七月初五）出生于江苏省宜兴县闸口乡一个农民家庭。
+1926年，就读吴氏小学。1930年，入宜兴县县立鹅山小学学习。
+1931年，小学毕业，考入无锡师范学校。
+1934年，完成三年师范初中，入读浙江大学代办的工业学校电机科。
+1935年，投考国立杭州艺术专科学校。
+1936年，入国立杭
+中国著名画家、美术教育家 吴冠中
+中国著名画家、美术教育家 吴冠中 (20张)
+ 州艺专习西画，兼学中国画及水彩画。
+1937年，抗日战争爆发，校长林风眠率领全校师生，与人民一起撤离杭州。
+1938年，艺专附中结业，升入本科学油画，师事常书鸿及关良。同时亦学习中国画。
+1940年，转学中国画，成了潘天寿的学生，临摹了不少历代绘画精品。
+1941年，仍迷恋油画色彩，转回油画系。
+1942年，毕业于国立杭州艺术专科学校。任国立重庆大学助教。
+1943年，于四川重庆沙坪坝青年宫举办第一次个人画展。
+1946年，考取全国公费留学绘画第一名，赴法国留学。
+1947年，就读于巴黎国立高等美术学校苏弗尔皮教授工作室进修油画。
+1948年，作品参加巴黎春季沙龙展和秋季沙龙展。
+1950年，留学归国，任教于中央美术学院1953年，任清华大学建筑系副教授
+1956年，任教于北京艺术学院
+1964年，任教于中央工艺美术学院
+1970年，“文革”期间被下放到河北农村劳动
+1973年，调回北京参加宾馆画创作
+1978年，中央工艺美术学院主办“吴冠中作品展”
+1979年，当选中国美术家协会常务理事
+1987年，香港艺术中心主办“吴冠中回顾展”
+吴冠中图册
+吴冠中图册 (5张)
+1991年，法国文化部授予其法国文艺最高勋位
+1992年，大英博物馆打破了只展出古代文物的惯例，首次为在世画家吴冠中举办“吴冠中——二十世纪的中国画家”展览，并郑重收藏了吴冠中的巨幅彩墨新作《小鸟天堂》
+1993年，法国巴黎塞纽奇博物馆举办“走向世界——吴冠中油画水墨速写展”，并颁发给他“巴黎市金勋章”
+1994年，当选为全国政协常委
+1999年，国家文化部主办“吴冠中画展”2000年，入选法兰西学院艺术院通讯院士，是首位获此殊荣的中国籍艺术家，这也是法兰西学院成立近二百年来第一位亚洲人获得这一职位
+2006年12月26日，香港中文大学授予吴冠中教授“荣誉文学博士”衔
+2007年8月，湖南美术出版社出版《吴冠中全集》
+2010年6月25日晚23时57分于北京医院病逝享年91岁。</string>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9H-6X-ccR">
+                    <rect key="frame" x="291" y="23" width="48" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="89h-uP-pxe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="更多详情">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="c9H-6X-ccR" firstAttribute="leading" secondItem="GBV-UE-cV3" secondAttribute="trailing" constant="18" id="1U8-Tv-HzL"/>
+                <constraint firstItem="c8Y-VC-VKm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="1VO-7z-ziQ"/>
+                <constraint firstItem="N5q-7I-BZC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="3d9-Ob-wCk"/>
+                <constraint firstItem="GBV-UE-cV3" firstAttribute="leading" secondItem="c8Y-VC-VKm" secondAttribute="trailing" constant="14" id="CWJ-Vf-2gq"/>
+                <constraint firstItem="GBV-UE-cV3" firstAttribute="centerY" secondItem="c8Y-VC-VKm" secondAttribute="centerY" id="KiC-rq-hO4"/>
+                <constraint firstAttribute="trailing" secondItem="PR6-9q-k4H" secondAttribute="trailing" constant="15" id="Ln6-x4-U1v"/>
+                <constraint firstAttribute="trailing" secondItem="N5q-7I-BZC" secondAttribute="trailing" constant="10" id="Wx3-Te-TRt"/>
+                <constraint firstAttribute="bottom" secondItem="N5q-7I-BZC" secondAttribute="bottom" id="fuK-zp-NoX"/>
+                <constraint firstItem="c9H-6X-ccR" firstAttribute="centerY" secondItem="PR6-9q-k4H" secondAttribute="centerY" id="oLt-md-y5C"/>
+                <constraint firstItem="PR6-9q-k4H" firstAttribute="leading" secondItem="c9H-6X-ccR" secondAttribute="trailing" constant="10" id="pyv-eO-hFN"/>
+                <constraint firstItem="PR6-9q-k4H" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="31" id="rAG-db-5yN"/>
+                <constraint firstItem="N5q-7I-BZC" firstAttribute="top" secondItem="c8Y-VC-VKm" secondAttribute="bottom" constant="12" id="vBS-7H-JDH"/>
+                <constraint firstItem="c8Y-VC-VKm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="vfk-b5-mGt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="content" destination="N5q-7I-BZC" id="rwV-if-G0e"/>
+            </connections>
+            <point key="canvasLocation" x="414.5" y="656"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="头像" width="35" height="35"/>
+        <image name="更多" width="10" height="11"/>
+    </resources>
+</document>
