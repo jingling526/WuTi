@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = WTBackGroundColor;
-    self.title = @"购物车";
+    self.navigationItem.title = @"购物车";
     [self.view addSubview:self.collectionView];
     [self setupUI];
     [self setupBarItem];

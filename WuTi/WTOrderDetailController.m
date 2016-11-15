@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"订单详情";
+    self.navigationItem.title = @"订单详情";
     self.view.backgroundColor = WTBackGroundColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupUI];

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    self.title = @"验证码";
+    self.navigationItem.title = @"验证码";
     // Do any additional setup after loading the view from its nib.
 }
 

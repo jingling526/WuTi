@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    self.title = @"注册";
+    self.navigationItem.title = @"注册";
     // Do any additional setup after loading the view from its nib.
 }
 

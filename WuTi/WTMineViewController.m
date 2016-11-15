@@ -63,7 +63,6 @@
     _buttonArray = [NSMutableArray array];
     [self setupUI];
     [self setupBarItem];
-    
     // Do any additional setup after loading the view.
 }
 
@@ -79,7 +78,7 @@
     [messageBtn addTarget:self action:@selector(message) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* messageBarBtn = [[UIBarButtonItem alloc]initWithCustomView:messageBtn];
     self.navigationItem.rightBarButtonItem = messageBarBtn;
-    
+    self.navigationItem.title = @"我的";
 }
 
 -(void)setting{

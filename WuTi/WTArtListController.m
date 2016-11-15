@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = WTBackGroundColor;
-    self.title = @"艺术品清单";
+    self.navigationItem.title = @"艺术品清单";
     [self setupUI];
     // Do any additional setup after loading the view.
 }

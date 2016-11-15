@@ -73,7 +73,7 @@
 }
 
 - (id)initWithSectionTitles:(NSArray *)sectiontitles {
-    self = [self initWithFrame:CGRectZero];
+    self = [super initWithFrame:CGRectZero];
     
     if (self) {
         [self commonInit];
@@ -120,7 +120,6 @@
     [super awakeFromNib];
     
     self.segmentWidth = 0.0f;
-    [self commonInit];
 }
 
 - (void)commonInit {
@@ -133,7 +132,8 @@
     _backgroundColor = [UIColor whiteColor];
     self.opaque = NO;
     _selectionIndicatorColor = [UIColor colorWithRed:52.0f/255.0f green:181.0f/255.0f blue:229.0f/255.0f alpha:1.0f];
-    
+    _selectionIndicatorBoxColor = _selectionIndicatorColor;
+
     self.selectedSegmentIndex = 0;
     self.segmentEdgeInset = UIEdgeInsetsMake(0, 5, 0, 5);
     self.selectionIndicatorHeight = 5.0f;
@@ -185,6 +185,7 @@
     _sectionImages = sectionImages;
     
     [self setNeedsLayout];
+    [self setNeedsDisplay];
 }
 
 - (void)setSelectionIndicatorLocation:(HMSegmentedControlSelectionIndicatorLocation)selectionIndicatorLocation {
@@ -218,6 +219,10 @@
 #pragma mark - Drawing
 
 - (CGSize)measureTitleAtIndex:(NSUInteger)index {
+    if (index >= self.sectionTitles.count) {
+        return CGSizeZero;
+    }
+    
     id title = self.sectionTitles[index];
     CGSize size = CGSizeZero;
     BOOL selected = (index == self.selectedSegmentIndex) ? YES : NO;
@@ -269,8 +274,8 @@
     
     self.selectionIndicatorStripLayer.backgroundColor = self.selectionIndicatorColor.CGColor;
     
-    self.selectionIndicatorBoxLayer.backgroundColor = self.selectionIndicatorColor.CGColor;
-    self.selectionIndicatorBoxLayer.borderColor = self.selectionIndicatorColor.CGColor;
+    self.selectionIndicatorBoxLayer.backgroundColor = self.selectionIndicatorBoxColor.CGColor;
+    self.selectionIndicatorBoxLayer.borderColor = self.selectionIndicatorBoxColor.CGColor;
     
     // Remove all sublayers to avoid drawing images over existing ones
     self.scrollView.layer.sublayers = nil;
@@ -285,7 +290,8 @@
             CGSize size = [self measureTitleAtIndex:idx];
             stringWidth = size.width;
             stringHeight = size.height;
-            CGRect rectDiv, fullRect;
+            CGRect rectDiv = CGRectZero;
+            CGRect fullRect = CGRectZero;
             
             // Text inside the CATextLayer will appear blurry unless the rect values are rounded
             BOOL locationUp = (self.selectionIndicatorLocation == HMSegmentedControlSelectionIndicatorLocationUp);
@@ -320,7 +326,9 @@
             CATextLayer *titleLayer = [CATextLayer layer];
             titleLayer.frame = rect;
             titleLayer.alignmentMode = kCAAlignmentCenter;
-            titleLayer.truncationMode = kCATruncationEnd;
+            if ([UIDevice currentDevice].systemVersion.floatValue < 10.0 ) {
+                titleLayer.truncationMode = kCATruncationEnd;
+            }
             titleLayer.string = [self attributedTitleAtIndex:idx];
             titleLayer.contentsScale = [[UIScreen mainScreen] scale];
             
@@ -419,8 +427,9 @@
             titleLayer.frame = textRect;
             titleLayer.alignmentMode = kCAAlignmentCenter;
             titleLayer.string = [self attributedTitleAtIndex:idx];
-            titleLayer.truncationMode = kCATruncationEnd;
-			
+            if ([UIDevice currentDevice].systemVersion.floatValue < 10.0 ) {
+                titleLayer.truncationMode = kCATruncationEnd;
+            }
             CALayer *imageLayer = [CALayer layer];
             imageLayer.frame = imageRect;
 			
@@ -468,7 +477,7 @@
     // Background layer
     CALayer *backgroundLayer = [CALayer layer];
     backgroundLayer.frame = fullRect;
-    [self.scrollView.layer insertSublayer:backgroundLayer atIndex:0];
+    [self.layer insertSublayer:backgroundLayer atIndex:0];
     
     // Border layer
     if (self.borderType & HMSegmentedControlBorderTypeTop) {
@@ -643,7 +652,7 @@
             CGFloat stringWidth = [self measureTitleAtIndex:idx].width + self.segmentEdgeInset.left + self.segmentEdgeInset.right;
             self.segmentWidth = MAX(stringWidth, self.segmentWidth);
         }];
-    } else if (self.type == HMSegmentedControlTypeTextImages && HMSegmentedControlSegmentWidthStyleDynamic) {
+    } else if (self.type == HMSegmentedControlTypeTextImages && self.segmentWidthStyle == HMSegmentedControlSegmentWidthStyleDynamic) {
         NSMutableArray *mutableSegmentWidths = [NSMutableArray array];
         
         int i = 0;
@@ -690,7 +699,12 @@
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView:self];
     
-    if (CGRectContainsPoint(self.bounds, touchLocation)) {
+    CGRect enlargeRect =   CGRectMake(self.bounds.origin.x - self.enlargeEdgeInset.left,
+                      self.bounds.origin.y - self.enlargeEdgeInset.top,
+                      self.bounds.size.width + self.enlargeEdgeInset.left + self.enlargeEdgeInset.right,
+                      self.bounds.size.height + self.enlargeEdgeInset.top + self.enlargeEdgeInset.bottom);
+    
+    if (CGRectContainsPoint(enlargeRect, touchLocation)) {
         NSInteger segment = 0;
         if (self.segmentWidthStyle == HMSegmentedControlSegmentWidthStyleFixed) {
             segment = (touchLocation.x + self.scrollView.contentOffset.x) / self.segmentWidth;
@@ -737,7 +751,7 @@
 }
 
 - (void)scrollToSelectedSegmentIndex:(BOOL)animated {
-    CGRect rectForSelectedIndex;
+    CGRect rectForSelectedIndex = CGRectZero;
     CGFloat selectedSegmentOffset = 0;
     if (self.segmentWidthStyle == HMSegmentedControlSegmentWidthStyleFixed) {
         rectForSelectedIndex = CGRectMake(self.segmentWidth * self.selectedSegmentIndex,

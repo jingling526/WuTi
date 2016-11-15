@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = WTBackGroundColor;
-    self.title = @"地址管理";
+    self.navigationItem.title = @"地址管理";
     [self getData];
     [self setupBarItem];
     [self setupUI];

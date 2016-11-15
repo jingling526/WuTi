@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    self.title = @"忘记密码";
+    self.navigationItem.title = @"忘记密码";
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)next:(id)sender {

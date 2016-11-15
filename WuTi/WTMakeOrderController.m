@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"填写订单";
+    self.navigationItem.title = @"填写订单";
     self.view.backgroundColor = WTBackGroundColor;
     [self setupUI];
     _payMethod = @"支付宝";

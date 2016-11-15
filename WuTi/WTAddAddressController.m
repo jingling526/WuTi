@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"填写收货地址";
+    self.navigationItem.title = @"填写收货地址";
     self.view.backgroundColor = WTBackGroundColor;
     [self setupUI];
     [self setupBarItem];

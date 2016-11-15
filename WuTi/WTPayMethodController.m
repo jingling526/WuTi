@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"选择支付方式";
+    self.navigationItem.title = @"选择支付方式";
     self.view.backgroundColor = WTBackGroundColor;
     
     [self setupUI];

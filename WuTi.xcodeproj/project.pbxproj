@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5BB99F1DDAD26300B3A6B7 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BB99E1DDAD26300B3A6B7 /* HMSegmentedControl.m */; };
 		B8075BBF1D0F98A20074315E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = B8075BBC1D0F98A20074315E /* UIImage+ImageEffects.m */; };
 		B8075BC01D0F98A20074315E /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B8075BBE1D0F98A20074315E /* UIImageView+LBBlurredImage.m */; };
 		B8075BC61D139BBC0074315E /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = B8075BC51D139BBC0074315E /* NullSafe.m */; };
@@ -97,7 +98,6 @@
 		B89E4B4D1CF8227A00FCB3C4 /* PayWayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89E4B4B1CF8227900FCB3C4 /* PayWayCell.xib */; };
 		B89E4B511CF8241D00FCB3C4 /* MoneyDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E4B4F1CF8241D00FCB3C4 /* MoneyDetailCell.m */; };
 		B89E4B521CF8241D00FCB3C4 /* MoneyDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89E4B501CF8241D00FCB3C4 /* MoneyDetailCell.xib */; };
-		B89E4B7A1CFE79C400FCB3C4 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E4B781CFE79C400FCB3C4 /* HMSegmentedControl.m */; };
 		B89E4B7E1CFEB5F300FCB3C4 /* MyOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E4B7C1CFEB5F300FCB3C4 /* MyOrderCell.m */; };
 		B89E4B7F1CFEB5F300FCB3C4 /* MyOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89E4B7D1CFEB5F300FCB3C4 /* MyOrderCell.xib */; };
 		B89E4B8E1CFEE23500FCB3C4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E4B821CFEE23500FCB3C4 /* AFHTTPSessionManager.m */; };
@@ -177,6 +177,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E5BB99D1DDAD26300B3A6B7 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		3E5BB99E1DDAD26300B3A6B7 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		B8075BBB1D0F98A20074315E /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		B8075BBC1D0F98A20074315E /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		B8075BBD1D0F98A20074315E /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
@@ -337,8 +339,6 @@
 		B89E4B4E1CF8241D00FCB3C4 /* MoneyDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyDetailCell.h; sourceTree = "<group>"; };
 		B89E4B4F1CF8241D00FCB3C4 /* MoneyDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyDetailCell.m; sourceTree = "<group>"; };
 		B89E4B501CF8241D00FCB3C4 /* MoneyDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyDetailCell.xib; sourceTree = "<group>"; };
-		B89E4B771CFE79C400FCB3C4 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
-		B89E4B781CFE79C400FCB3C4 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		B89E4B7B1CFEB5F300FCB3C4 /* MyOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderCell.h; sourceTree = "<group>"; };
 		B89E4B7C1CFEB5F300FCB3C4 /* MyOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderCell.m; sourceTree = "<group>"; };
 		B89E4B7D1CFEB5F300FCB3C4 /* MyOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOrderCell.xib; sourceTree = "<group>"; };
@@ -967,8 +967,8 @@
 				B8D9E9DD1CE5A4AC00ED6AD4 /* UIColor+RandomColor.m */,
 				B810651F1D0E5F62006CE6FA /* FXBlurView.h */,
 				B81065201D0E5F62006CE6FA /* FXBlurView.m */,
-				B89E4B771CFE79C400FCB3C4 /* HMSegmentedControl.h */,
-				B89E4B781CFE79C400FCB3C4 /* HMSegmentedControl.m */,
+				3E5BB99D1DDAD26300B3A6B7 /* HMSegmentedControl.h */,
+				3E5BB99E1DDAD26300B3A6B7 /* HMSegmentedControl.m */,
 				B89E4B971CFEE4F300FCB3C4 /* MBProgressHUD.h */,
 				B89E4B981CFEE4F300FCB3C4 /* MBProgressHUD.m */,
 				B8F4E2351CEB0929005A22FE /* UIView+Extension.h */,
@@ -1308,6 +1308,7 @@
 				B8F4E2431CEC5361005A22FE /* WTResetPwdController.m in Sources */,
 				B8075BC61D139BBC0074315E /* NullSafe.m in Sources */,
 				B8F2E5831CE465030086B7B6 /* WTMainViewController.m in Sources */,
+				3E5BB99F1DDAD26300B3A6B7 /* HMSegmentedControl.m in Sources */,
 				B8F2E59F1CE566550086B7B6 /* WTMainCollectionViewCell.m in Sources */,
 				B8D9E9E31CE5A7F200ED6AD4 /* CHTCollectionViewWaterfallHeader.m in Sources */,
 				B810650F1D0D616F006CE6FA /* WTFindTopView.m in Sources */,
@@ -1333,7 +1334,6 @@
 				B8F4E23D1CEC4A30005A22FE /* WTForgetPwdController.m in Sources */,
 				B8075BBF1D0F98A20074315E /* UIImage+ImageEffects.m in Sources */,
 				B8F4E2641CEF0DB8005A22FE /* LabelView.m in Sources */,
-				B89E4B7A1CFE79C400FCB3C4 /* HMSegmentedControl.m in Sources */,
 				B81064EA1D0D0D69006CE6FA /* HDPicModle.m in Sources */,
 				B81065031D0D0D8D006CE6FA /* UIButton+HDExtension.m in Sources */,
 				B89E4B311CF6A6AB00FCB3C4 /* WTOptionController.m in Sources */,

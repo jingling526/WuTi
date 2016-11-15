@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"喜欢";
+    self.navigationItem.title = @"喜欢";
     self.view.backgroundColor = WTBackGroundColor;
     [self.view addSubview:self.collectionView];
     [self setupUI];

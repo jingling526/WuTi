@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    self.title = @"登录密码";
+    self.navigationItem.title = @"登录密码";
     // Do any additional setup after loading the view from its nib.
 }
 

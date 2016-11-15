@@ -21,8 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的订单";
     self.view.backgroundColor = WTBackGroundColor;
+    self.navigationItem.title = @"我的订单";
+    
     [self setupUI];
     // Do any additional setup after loading the view.
 }
